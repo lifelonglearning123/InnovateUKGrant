@@ -10,8 +10,9 @@ load_dotenv()  # Load environment variables from .env file
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
 st.title("InnovateUK Grant Writer")
-main_question = st.text_input("What is the main question?")
-project_title = st.text_area("What is the project?")
+project_title = st.text_area("Provide a high-level overview of your business and its innovations.")
+main_question = st.text_input("What is the main application question? i.e. Your idea and innovation")
+
 
 # Initialize the session state for questions and answers. question_answer_paris list is created within the session_state dictionary
 if 'question_answer_pairs' not in st.session_state:
